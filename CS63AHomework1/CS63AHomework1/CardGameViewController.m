@@ -13,6 +13,7 @@
 
 @interface CardGameViewController (){
   PlayingCardDeck *playingCardDeck;
+ // Deck *deck;
 }
 
 
@@ -27,17 +28,14 @@
 - (void)viewDidLoad{
   [super viewDidLoad];
   playingCardDeck = [[PlayingCardDeck alloc] init];
-  
-  
+//  deck = [[Deck alloc] init];
 }
 
 - (void)setFlipCount:(int)flipCount
 {
     _flipCount = flipCount;
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
-  NSLog(@"flipCount = %d ", self.flipCount);
-  
-  
+    NSLog(@"flipCount = %d ", self.flipCount);
 }
 
 //
@@ -46,18 +44,17 @@
   if ([sender.currentTitle length]){
   
     [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
-                    forState:UIControlStateNormal];
+                      forState:UIControlStateNormal];
   
     [sender setTitle:@"" forState:UIControlStateNormal];
   } else {
     PlayingCard *card = (PlayingCard*)playingCardDeck.drawRandomCard;
     
-   // [Deck randomCard:newCard];
-  
-    
     [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                       forState:UIControlStateNormal];
-    NSString* title = [NSString stringWithFormat:@"%lu %@",(unsigned long)card.rank, card.suit];
+   
+    NSString* title = card.contents;
+    
     [sender setTitle:title forState:UIControlStateNormal];
 
   }
