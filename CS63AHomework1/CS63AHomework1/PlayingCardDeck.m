@@ -11,14 +11,17 @@
 
 @implementation PlayingCardDeck
 
-- (instancetype)init
-{
+- (instancetype)init{
+  
   self = [super init];
   
+  //nested loop to build a playing card deck
   if (self)
   {
+    // loops through the four suits
     for (NSString *suit in [PlayingCard validSuits])
     {
+      // loops through all the ranks
       for (NSUInteger rank =1; rank <= [PlayingCard maxRank]; rank++)
       {
         PlayingCard *card = [[PlayingCard alloc] init];

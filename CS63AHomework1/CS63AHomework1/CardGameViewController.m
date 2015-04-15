@@ -7,16 +7,12 @@
 //
 
 #import "CardGameViewController.h"
-
 #import "PlayingCard.h"
 #import "PlayingCardDeck.h"
 
 @interface CardGameViewController (){
   PlayingCardDeck *playingCardDeck;
- // Deck *deck;
 }
-
-
 
 @property (strong, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
@@ -25,20 +21,22 @@
 
 @implementation CardGameViewController
 
+//This checks to make sure the view loaded and connects the
+//view wiht the controller
 - (void)viewDidLoad{
   [super viewDidLoad];
   playingCardDeck = [[PlayingCardDeck alloc] init];
-//  deck = [[Deck alloc] init];
 }
 
-- (void)setFlipCount:(int)flipCount
-{
+- (void)setFlipCount:(int)flipCount{
     _flipCount = flipCount;
+  
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
     NSLog(@"flipCount = %d ", self.flipCount);
 }
 
-//
+// This method toggles the card face up and face down
+// by using the abscense of a title on the backside of the card
 - (IBAction)touchCardButtom:(UIButton *)sender {
   
   if ([sender.currentTitle length]){
@@ -56,12 +54,8 @@
     NSString* title = card.contents;
     
     [sender setTitle:title forState:UIControlStateNormal];
-
   }
-  //calls the getter and setter
-  //increments and then calls both
   self.flipCount++;
-
 }
 
 @end
