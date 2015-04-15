@@ -11,12 +11,9 @@
 
 @interface Deck : NSObject
 
-//adds a card to the Deck
 -(void)addCard:(Card *)card atTop:(BOOL)atTop;
 -(void)addCard:(Card *)card;
 
-
-//returns a random card
 - (Card *)drawRandomCard;
 
 @end
