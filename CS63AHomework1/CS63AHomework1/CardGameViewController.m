@@ -7,7 +7,9 @@
 //
 
 #import "CardGameViewController.h"
+
 #import "PlayingCard.h"
+#import "Deck.h"
 #import "PlayingCardDeck.h"
 
 @interface CardGameViewController (){
@@ -20,9 +22,20 @@
 @end
 
 @implementation CardGameViewController
+- (Deck *)deck
+{
+  if (!_deck) _deck = [self createDeck];
+  
+  return _deck;
+}
+
+- (Deck *)createDeck
+{
+  return [[PlayingCardDeck alloc]init];
+}
 
 //This checks to make sure the view loaded and connects the
-//view wiht the controller
+//view with the controller
 - (void)viewDidLoad{
   [super viewDidLoad];
   playingCardDeck = [[PlayingCardDeck alloc] init];
@@ -46,7 +59,7 @@
   
     [sender setTitle:@"" forState:UIControlStateNormal];
   } else {
-    PlayingCard *card = (PlayingCard*)playingCardDeck.drawRandomCard;
+    Card *card = [self.drawRandomCard;
     
     [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                       forState:UIControlStateNormal];

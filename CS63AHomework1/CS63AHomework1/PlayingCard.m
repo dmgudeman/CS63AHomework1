@@ -15,7 +15,7 @@
   return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
-//because both getter and setter are overriden
+
 @synthesize suit = _suit;
 
 + (NSArray *)validSuits {
