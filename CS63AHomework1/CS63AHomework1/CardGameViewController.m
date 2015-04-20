@@ -7,26 +7,29 @@
 //
 
 #import "CardGameViewController.h"
-
+#import "CardMatchingGame.h"
 #import "PlayingCard.h"
 #import "PlayingCardDeck.h"
 
 @interface CardGameViewController (){
   PlayingCardDeck *playingCardDeck;
 }
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (nonatomic) int flipCount;
-@property (strong, nonatomic) Deck *deck;
+
+@property (strong, nonatomic)CardMatchingGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+
 @end
 
 @implementation CardGameViewController
 
-- (Deck *)deck
+- (CardMatchingGame *)game
 {
-  if (!_deck) _deck = [self createDeck];
-  
-  return _deck;
+  if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:0
+                                                        usingDeck:[self createDeck]];
+  return _game;
 }
+
+
 
 - (Deck *)createDeck
 {
@@ -37,18 +40,11 @@
 // by using the abscense of a title on the backside of the card
 - (IBAction)touchCardButtom:(UIButton *)sender
 {
-  if ([sender.currentTitle length]){
-    [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
-                      forState:UIControlStateNormal];
-    [sender setTitle:@"" forState:UIControlStateNormal];
-  } else {
-    Card *randomCard = [self.deck drawRandomCard];
-                  
-    [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-                                          forState:UIControlStateNormal];
-    [sender setTitle:randomCard.contents forState:UIControlStateNormal];
-  }
-  self.flipCount++;
+  int chosenButtonIndex = [self.cardButtons indexOfObject:sender];
+  [self.game chooseCardAtIndex:chosenButtonIndex];
+  [self updateUI];
+  
+ 
 }
 
 
@@ -59,12 +55,7 @@
   playingCardDeck = [[PlayingCardDeck alloc] init];
 }
 
-- (void)setFlipCount:(int)flipCount{
-    _flipCount = flipCount;
-  
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
-    NSLog(@"flipCount = %d ", self.flipCount);
-}
+- (void)updateUI {}
 
 
 
