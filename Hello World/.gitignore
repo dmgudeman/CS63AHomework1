@@ -1,0 +1,11 @@
+UserInterfaceState.xuserstate
+build
+*.pxuser
+*.perspectivev3
+*.modelv3
+*~
+*~.nib
+*~.xib
+.DS_Store
+xcuserdata/
+

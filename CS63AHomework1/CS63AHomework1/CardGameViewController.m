@@ -11,12 +11,13 @@
 #import "PlayingCard.h"
 #import "PlayingCardDeck.h"
 
-@interface CardGameViewController (){
-  PlayingCardDeck *playingCardDeck;
-}
-
+@interface CardGameViewController ()
+//{
+//  PlayingCardDeck *playingCardDeck;
+//}
 @property (strong, nonatomic)CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) Deck *deck;
 
 @end
 
@@ -24,12 +25,15 @@
 
 - (CardMatchingGame *)game
 {
-  if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:0
+  if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                         usingDeck:[self createDeck]];
   return _game;
 }
-
-
+- (Deck *)deck
+{
+  if (!_deck) _deck = [self createDeck];
+  return _deck;
+}
 
 - (Deck *)createDeck
 {
@@ -43,19 +47,40 @@
   int chosenButtonIndex = [self.cardButtons indexOfObject:sender];
   [self.game chooseCardAtIndex:chosenButtonIndex];
   [self updateUI];
-  
- 
 }
 
-
-//This checks to make sure the view loaded and connects the
-//view with the controller
 - (void)viewDidLoad{
   [super viewDidLoad];
-  playingCardDeck = [[PlayingCardDeck alloc] init];
+  [CardMatchingGame self];
+//  playingCardDeck = [[PlayingCardDeck alloc] init];
+ // deck = [[Deck alloc]init]
 }
 
-- (void)updateUI {}
+- (void)updateUI
+{
+for (UIButton *cardButton in self.cardButtons) {
+  int cardButtonIndex = [self.cardButtons indexOfObject:cardButton];
+  Card *card = [self.game cardAtIndex:cardButtonIndex];
+  [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+  [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+  cardButton.enabled = !card.isMatched;
+}
+}
+- (NSString *)titleForCard:(Card *)card
+{
+  return card.isChosen ? card.contents : @"";
+}
+
+- (UIImage *)backgroundImageForCard:(Card *)card
+{
+  return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
+}
+
+
+
+
+
+
 
 
 

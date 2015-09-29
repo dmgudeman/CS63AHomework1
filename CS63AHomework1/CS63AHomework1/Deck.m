@@ -13,7 +13,6 @@
 //create a private array of cards
 @property (strong, nonatomic) NSMutableArray *cards;
 
-
 @end
 
 @implementation Deck
@@ -42,6 +41,7 @@
   if ([self.cards count]){
     unsigned index = arc4random() % [self.cards count];
     randomCard = self.cards[index];
+    [self.cards removeObjectAtIndex:index];
   }
   return randomCard;
 }

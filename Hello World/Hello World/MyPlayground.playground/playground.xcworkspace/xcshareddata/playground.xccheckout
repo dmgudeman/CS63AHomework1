@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>73A96AC2-5369-4EC9-BA23-44635A9D278D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>playground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>351BB86089D5AEB8B034A934224AE4029ECBF4C5</key>
+		<string>https://github.com/dmgudeman/CIS55HelloWorld.git</string>
+		<key>53920DDFDB93E5DD9E05D33B73766F533D9CAE11</key>
+		<string>https://github.com/dmgudeman/CS63AHomework1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hello World/MyPlayground.playground/playground.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>351BB86089D5AEB8B034A934224AE4029ECBF4C5</key>
+		<string>../../..</string>
+		<key>53920DDFDB93E5DD9E05D33B73766F533D9CAE11</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dmgudeman/CIS55HelloWorld.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>351BB86089D5AEB8B034A934224AE4029ECBF4C5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>53920DDFDB93E5DD9E05D33B73766F533D9CAE11</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>351BB86089D5AEB8B034A934224AE4029ECBF4C5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hello%20World</string>
+		</dict>
+	</array>
+</dict>
+</plist>

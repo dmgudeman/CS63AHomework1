@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "351BB86089D5AEB8B034A934224AE4029ECBF4C5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "351BB86089D5AEB8B034A934224AE4029ECBF4C5" : 0,
+    "53920DDFDB93E5DD9E05D33B73766F533D9CAE11" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7B503B9D-FF14-4072-A6BD-ADE0D873B898",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "351BB86089D5AEB8B034A934224AE4029ECBF4C5" : "Hello%20World",
+    "53920DDFDB93E5DD9E05D33B73766F533D9CAE11" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hello World",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hello World.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dmgudeman\/CIS55HelloWorld.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "351BB86089D5AEB8B034A934224AE4029ECBF4C5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dmgudeman\/CS63AHomework1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "53920DDFDB93E5DD9E05D33B73766F533D9CAE11"
+    }
+  ]
+}
