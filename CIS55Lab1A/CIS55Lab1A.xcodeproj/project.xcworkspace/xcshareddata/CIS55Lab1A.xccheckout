@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>11986155-D64F-4C6F-9874-311367C578D7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CIS55Lab1A</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>53920DDFDB93E5DD9E05D33B73766F533D9CAE11</key>
 		<string>https://github.com/dmgudeman/CS63AHomework1.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CIS55Lab1A/CIS55Lab1A.xcodeproj/project.xcworkspace</string>
+	<string>CIS55Lab1A/CIS55Lab1A.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>53920DDFDB93E5DD9E05D33B73766F533D9CAE11</key>
