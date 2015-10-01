@@ -32,7 +32,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -91,6 +91,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
                     <connections>
                         <outlet property="nameTextField" destination="uLq-LK-Mqa" id="4eA-B2-shZ"/>
                         <outlet property="outputLabel" destination="vYI-lu-dMb" id="Mb8-m2-wem"/>
